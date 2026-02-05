@@ -95,11 +95,6 @@ Want to add your own demo? Great! Follow these steps:
 - **Document everything:** Capture your process for others to learn from
 - **Share challenges:** Failed attempts are valuable learning opportunities
 
-## 📖 Learn More
-
-- [IBM Bob Documentation](https://ibm.com/bob) *(placeholder link)*
-- [Best Practices Guide](https://ibm.com/bob/best-practices) *(placeholder link)*
-
 ## 📄 License
 
 See [LICENSE](LICENSE) file for details.
