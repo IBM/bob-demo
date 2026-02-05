@@ -1,0 +1,24 @@
+# Example Input File
+
+This is a placeholder file to demonstrate the Input Documents folder structure.
+
+Replace this with actual input files relevant to your demo, such as:
+- Source code files that Bob will analyze or modify
+- Configuration files
+- Data files (JSON, YAML, CSV, etc.)
+- Documentation or requirements
+
+## Example Content
+
+```javascript
+// Example: Legacy code that needs modernization
+function calculateTotal(items) {
+    var total = 0;
+    for (var i = 0; i < items.length; i++) {
+        total += items[i].price;
+    }
+    return total;
+}
+```
+
+This example shows legacy JavaScript that could be modernized to use modern ES6+ syntax.
