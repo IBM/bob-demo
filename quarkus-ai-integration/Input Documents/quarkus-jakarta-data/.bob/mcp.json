@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "quarkus-dev-mode": {
+      "type": "streamable-http",
+      "url": "http://localhost:8080/q/dev-mcp",
+      "disabled": false,
+      "alwaysAllow": [
+        "devui-endpoints_getAllEndpoints",
+        "tools_list",
+        "resources_list",
+        "resources_read",
+        "devui-extensions_addExtension",
+        "devui-extensions_listInstallableExtensions",
+        "devui-continuous-testing_start"
+      ]
+    }
+  }
+}

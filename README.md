@@ -12,6 +12,15 @@ This repository showcases practical demonstrations of IBM Bob's capabilities acr
 
 Whether you're new to IBM Bob or looking to explore advanced features, these demos provide hands-on examples you can learn from and adapt to your own projects.
 
+## 🤖 List of Demos
+
+We recommend you to create a branch before starting using Bob with this repository, so in case of an error, ro to repeat the demo, you can always get back to the `main` branch.
+
+### 🧠 AI Integration
+
+* Quarkus-Ai-Integration: A demo to show how you can integrate a Quarkus application with AI.
+
+
 ## 📁 Demo Structure
 
 Every demo in this repository follows a consistent four-folder structure:
@@ -50,6 +59,7 @@ The final artifacts produced by Bob, including:
 - Generated documentation
 - Test files and validation results
 - Any other output from the demo
+- This folder is optional if the demo is not producing output files, or you think they are not worth to show
 
 **Purpose:** Show the end result and demonstrate Bob's capabilities.
 
