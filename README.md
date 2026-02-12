@@ -23,23 +23,22 @@ We recommend you to create a branch before starting using Bob with this reposito
 
 ## 📁 Demo Structure
 
-Every demo in this repository follows a consistent four-folder structure. Check the [demo-template/](demo-template/) folder for more details.]
+Every demo in this repository follows a consistent four-folder structure. Check the [demo-template/](demo-template/) folder for more details.
 
 
 ## 🚀 Getting Started
 
+Clone the repository and navigate to the desired demo folder. Follow the instructions in the `README.md` file to set up and run the demo.
 
-
+        git clone https://github.com/IBM/bob-demo.git
 
 ## 🤝 Contributing
 
-Want to add your own demo? Great! Follow these steps:
+Want to add your own demo? Great! Follow the [CONTRIBUTING.md](CONTRIBUTING.md) guidelines to get started.
 
-1. Copy the demo-template folder
-2. Create your demo following the folder structure
-3. Ensure all README files are updated with your specific content
-4. Add your demo to the list above
-5. Submit a pull request
+## 💬 Ask a Question
+
+Contact the team via the [discussion forum](https://github.com/IBM/bob-demo/discussions) and propose a new demo or discuss your suggested feature.
 
 ## For More Content Take a look at the Bob YT channel!
 
