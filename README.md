@@ -20,6 +20,10 @@ We recommend you to create a branch before starting using Bob with this reposito
 
 * [Quarkus-Ai-Integration](quarkus-ai-integration): A demo to show how you can integrate a Quarkus application with AI.
 
+### 🛠️ Development Tools
+
+* [Beads Integration](beads): Setting up Beads issue tracking for use with IBM Bob.
+
 
 ## 📁 Demo Structure
 
