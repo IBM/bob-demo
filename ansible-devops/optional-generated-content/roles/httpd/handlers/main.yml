@@ -1,0 +1,14 @@
+---
+# Handlers for httpd role
+
+- name: Restart httpd
+  ansible.builtin.service:
+    name: httpd
+    state: restarted
+
+- name: Restart firewalld
+  ansible.builtin.service:
+    name: firewalld
+    state: restarted
+
+# Made with Bob

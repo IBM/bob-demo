@@ -1,0 +1,16 @@
+---
+# Default variables for httpd role
+# These can be overridden in playbooks or inventory
+
+# Apache server configuration variables
+httpd_server_root: "/etc/httpd"
+httpd_listen: "80"
+httpd_server_admin: "webmaster@localhost"
+httpd_server_name: "{{ ansible_fqdn }}"
+httpd_server_tokens: "Prod"
+httpd_document_root: "/var/www/html"
+httpd_error_log: "logs/error_log"
+httpd_log_level: "warn"
+httpd_access_log: "logs/access_log"
+
+# Made with Bob
