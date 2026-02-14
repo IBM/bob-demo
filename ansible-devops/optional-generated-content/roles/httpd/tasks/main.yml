@@ -1,0 +1,36 @@
+---
+# Tasks for httpd role
+
+- name: Install httpd package
+  ansible.builtin.package:
+    name: httpd
+    state: present
+
+- name: Copy httpd configuration from template
+  ansible.builtin.template:
+    src: httpd.conf.j2
+    dest: /etc/httpd/conf/httpd.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: Restart httpd
+
+- name: Ensure firewalld is installed
+  ansible.builtin.package:
+    name: firewalld
+    state: present
+
+- name: Ensure firewalld is running
+  ansible.builtin.service:
+    name: firewalld
+    state: started
+    enabled: true
+
+- name: Open HTTP port in firewalld
+  ansible.posix.firewalld:
+    service: http
+    permanent: true
+    state: enabled
+  notify: Restart firewalld
+
+# Made with Bob

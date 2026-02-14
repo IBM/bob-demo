@@ -1,0 +1,30 @@
+---
+galaxy_info:
+  author: Ansible Developer
+  description: Role to install and configure Apache HTTP Server (httpd) with firewall configuration
+  company: 
+  
+  license: MIT
+  
+  min_ansible_version: "2.9"
+  
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+        - 9
+    - name: Fedora
+      versions:
+        - all
+  
+  galaxy_tags:
+    - web
+    - httpd
+    - apache
+    - webserver
+    - firewall
+
+dependencies: []
+
+# Made with Bob
