@@ -51,7 +51,7 @@ Go to the bottom-left dropdown menu and select _Quarkus Developer_ mode.
 ![IBM Bob Mode](screenshots/bob2.png)
 
 > [!NOTE]
-> Take a look at the folder [input-documents/quarkus-jakarta-data/.bob](/input-documents/quarkus-jakarta-data/.bob) to see the details of the custom mode and the mcp configuration.
+> Take a look at the folder [input-documents/quarkus-jakarta-data/.bob](input-documents/quarkus-jakarta-data/.bob) to see the details of the custom mode and the mcp configuration.
 
 
 ### Step 3: Time for Prompting

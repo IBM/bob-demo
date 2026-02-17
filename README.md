@@ -20,6 +20,10 @@ We recommend you to create a branch before starting using Bob with this reposito
 
 * [Ansible-DevOps](ansible-devops): A demo to show how Bob can generate 
 
+### 🤝 Knowledge Transfer
+
+* [Automated Architecture Tests](automated-architecture-taikai): A demo to show how to generate architecture documents and tests for legacy applications.
+
 ### 🧠 AI Integration
 
 * [Quarkus-Ai-Integration](quarkus-ai-integration): A demo to show how you can integrate a Quarkus application with AI.
