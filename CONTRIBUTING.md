@@ -34,9 +34,9 @@
 
         git status      
           
-11. Commit your changes to your local topic branch. 
+11. Commit your changes to your local topic branch. Make sure, your commits are signed.
 
-        git commit -m 'Description of change/addition...'
+        git commit-S -m 'Description of change/addition...'
         
 12. Update your branch with any changes made upstream since you started.
    * Fetch the latest changes from upstream
