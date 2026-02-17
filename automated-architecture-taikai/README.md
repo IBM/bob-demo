@@ -1,123 +1,87 @@
 # Implementation Journey: [Architecture Tests with Taikai]
 
-This demo shows how Bob can understand the architecture of a Java (Spring Boot) project and generate a Taikai JUnit test so the architecture of a legacy application is maintained across different tems.
+This demo shows how Bob can understand the architecture of a Java (Spring Boot) project and generate a Taikai JUnit test so the architecture of a legacy application is maintained across different teams.
 
 
-**Date added:** [02/15/2026]  
+**Date added:** [02/17/2026]  
 **Duration:** 10 min 
 **Mode(s) Used:** Advanced
 
 ## Initial Goal
 
-Generate 
+Generate a test to validate the architecture of a legacy (or not) project.
 
 ---
 
 ## Step-by-Step Process
 
-### Step 1: Start Quarkus MCP Server
+### Step 1: Clone the Petclinic project
 
-Go to a terminal window, and inside [input-documents/quarkus-jakarta-data](input-documents/quarkus-jakarta-data) run the following command: `./mvnw quarkus:dev`
+Go to a terminal window, and clone the following project: https://github.com/spring-projects/spring-petclinic
 
-This command will start the Quarkus application in dev mode with the MCP Server enabled.
-Then open IBM Bob IDE and open the `input-documents/quarkus-jakarta-data` project.
+```
+git clone https://github.com/spring-projects/spring-petclinic.git
+```
 
 **Bob's response:**
 
-Verify that Bob is connected to the Quarkus MCP Server by inspecting the MCP tab:
-
-![Show MCP Servers in IBM Bob](screenshots/bob1.png)
-
 **Outcome:**
 
-IBM Bob is now connected to the Quarkus MCP Server.
+Project cloned in the local directory
 
-### Step 2: Select Quarkus Developer
+### Step 2: Select Advanced Mode
 
-To use the Quarkus Developer mode to migrate projects to AI, we created a custom Bob mode with rules to provide guidance on how to integrate with AI.
+Open the cloned project into Bob and select _Advanced_ mode.
 
 **Bob's response:** 
 
-Go to the bottom-left dropdown menu and select _Quarkus Developer_ mode.
+Go to the bottom-left dropdown menu and select _Advanced_ mode.
 
 **Outcome:**
 
-![IBM Bob Mode](screenshots/bob2.png)
-
-> [!NOTE]
-> Take a look at the folder [input-documents/quarkus-jakarta-data/.bob](input-documents/quarkus-jakarta-data/.bob) to see the details of the custom mode and the mcp configuration.
+![IBM Bob Mode](screenshots/bob1.png)
 
 
 ### Step 3: Time for Prompting
 
-At this point, we can start prompting Bob, check the [prompt-templates](prompt-templates/) folder for the prompting.
+At this point, we can start prompting Bob and check the [prompt-templates](prompt-templates/) folder for the prompts.
 
 ---
 
-## Key Decisions
-
-### Decision 1: Create a Custom Mode with MCP
-
-**Context:**
-
-Bob needs to add the correct dependencies/extensions in the Quarkus project to use LangChain4j.
-
-**Options Considered:** 
-
-Bob could modify the `pom.xml` file directly, adding the dependencies.
-
-**Choice Made:**
-
-Implement a custom mode connecting to the Quarkus MCP Server.
-
-**Rationale:** 
-
-Quarkus provides an [MCP Server](https://quarkus.io/guides/dev-mcp) to find the currently installed extensions, list all available extensions, and set the extension to the correct versions.
-In this way, we make Quarkus decide which version to use in each case.
-
-### Decision 2: Create Rules for the integration
-
-**Context:** 
-
-Bob has the knowledge to code in Quarkus and to provide LangChain4j integration, but in most cases, you want Bob to produce code that follows defined patterns.
-
-**Options Considered:** 
-
-Let Bob produce the code without any guidelines.
-
-**Choice Made:** 
-
-Create specific rules for the mode.
-
-**Rationale:**
-
-Even though Bob could generate code by its own, we decided to provide some guidelines, as this is more of a realistic scenario.
-
----
-
-### Challenge 1: Hallucinations with wide context
+### Challenge 1: Use the latest Taikai code
 
 **Issue:** 
 
-If the prompt was too generic, like: _Transform this application into an AI application_, the solution produced by Bob could be far from perfect, hallucinating or guessing too much.  
+IBM Bob can be trained without the latest code for a specific library, leading to outdated code.
 
 **Solution:** 
 
-Implement all integrations with multiple prompts, executing each in turn.
+Use the `@` character followed by the project documentation link to let Bob know where the most up-to-date documentation of the project is.
 
 **Learning:**
 
-Always better to have multiple prompts rather than one containing all the information.
+There are multiple ways to provide extra information to Bob. Rules are one way, and adding the URL of the documentation file is another.
+
+### Challenge 2: Use the latest Version of Taikai
+
+**Issue:** 
+
+IBM Bob can be trained without the latest code for a specific library, leading to outdated code.
+If the project documentation doesn't show the version number, Bob uses the one from his training, which might be too old.
+
+**Solution:** 
+
+When Bob previews the `pom.xml`, manually changes the pom version to the desired one, and then approves the change.
+
+**Learning:**
+
+There are multiple ways to provide extra information to Bob. Rules are one way; sometimes it is faster and easier to change them manually.
 
 ---
 
 ## Final Outcome
 
 **What was achieved:**
-- Quarkus application integrated with LangChain4j
-- AI Service generation
-- Tools creation
-- Endpoint for receiving chat messages
-
-
-
+- Bob understands code and the architecture decisions taken at development time.
+- Creates a test so that further development continues following the same architecture.
+- Provides a document explaining the architecture for the team.
