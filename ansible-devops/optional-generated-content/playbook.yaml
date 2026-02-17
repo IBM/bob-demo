@@ -1,0 +1,58 @@
+---
+- name: Configure Webservers in hosts
+  hosts: webservers
+  become: true
+  vars:
+    # Apache server configuration variables
+    httpd_server_root: "/etc/httpd"
+    httpd_listen: "80"
+    httpd_server_admin: "webmaster@localhost"
+    httpd_server_name: "{{ ansible_fqdn }}"
+    httpd_server_tokens: "Prod"
+    httpd_document_root: "/var/www/html"
+    httpd_error_log: "logs/error_log"
+    httpd_log_level: "warn"
+    httpd_access_log: "logs/access_log"
+  tasks:
+    - name: Install httpd package
+      ansible.builtin.package:
+        name: httpd
+        state: present
+
+    - name: Copy httpd configuration from template
+      ansible.builtin.template:
+        src: httpd.conf.j2
+        dest: /etc/httpd/conf/httpd.conf
+        owner: root
+        group: root
+        mode: '0644'
+      notify: Restart httpd
+
+    - name: Ensure firewalld is installed
+      ansible.builtin.package:
+        name: firewalld
+        state: present
+
+    - name: Ensure firewalld is running
+      ansible.builtin.service:
+        name: firewalld
+        state: started
+        enabled: true
+
+    - name: Open HTTP port in firewalld
+      ansible.posix.firewalld:
+        service: http
+        permanent: true
+        state: enabled
+      notify: Restart firewalld
+
+  handlers:
+    - name: Restart httpd
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
+
+    - name: Restart firewalld
+      ansible.builtin.service:
+        name: firewalld
+        state: restarted

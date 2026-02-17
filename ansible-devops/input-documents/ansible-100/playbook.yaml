@@ -1,0 +1,5 @@
+---
+- name: Configure Webservers in hosts
+  hosts: webservers
+  become: true
+
