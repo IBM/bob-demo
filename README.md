@@ -16,6 +16,10 @@ Whether you're new to IBM Bob or looking to explore advanced features, these dem
 
 We recommend you to create a branch before starting using Bob with this repository, so in case of an error, ro to repeat the demo, you can always get back to the `main` branch.
 
+### 🤝 Knowledge Transfer
+
+* [Automated Architecture Tests](automated-architecture-taikai): A demo to show how to generate architecture documents and tests for legacy applications.
+
 ### 🧠 AI Integration
 
 * [Quarkus-Ai-Integration](quarkus-ai-integration): A demo to show how you can integrate a Quarkus application with AI.
