@@ -7,8 +7,8 @@ This example shows how to configure a Bob mode, create an MCP server, and create
 **Mode(s) Used:** Custom *Playwright Tester* mode
 
 ## Initial Goal
-
 Defines a Bob mode to explore the web.
+
 ---
 
 ## Step-by-Step Process
