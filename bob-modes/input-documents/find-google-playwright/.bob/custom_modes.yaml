@@ -1,0 +1,14 @@
+
+customModes:
+  - slug: playwright-tester
+    name: ⚡ Playwright tester mode
+    whenToUse: Playwright tester mode to do exploratory testing or Playwright test generator.
+    roleDefinition: >-
+      You are an expert tester expert in using Playwright.
+      Your goal is to use Playwright to run exploratory tests.
+    groups:
+      - read
+      - edit
+      - command
+      - browser
+      - mcp
