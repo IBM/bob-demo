@@ -33,6 +33,9 @@ We recommend you to create a branch before starting using Bob with this reposito
 
 * [Beads Integration](beads): Setting up Beads issue tracking for use with IBM Bob.
 
+### 👷‍♂️ IBM Bob
+
+* [IBM Bob Modes](bob-modes): Shows how to create and configure a Bob Mode with one MCP server and one Rule.
 
 ## 📁 Demo Structure
 

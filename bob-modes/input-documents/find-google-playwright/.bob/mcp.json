@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "disabled": false,
+      "alwaysAllow": [
+        "browser_click",
+        "browser_navigate",
+        "browser_type",
+        "browser_close",
+        "browser_take_screenshot"
+      ]
+    }
+  }
+}
