@@ -80,6 +80,8 @@ pipx install beads-mcp
 ```
 
 This installs the `beads-mcp` executable, which exposes Beads operations through the Model Context Protocol (MCP).
+If you have not used pipx previously, you may need to add the location of the `beads-mcp` binary to your PATH in
+your shell rc (e.g., add `PATH=$HOME/.local/bin:$PATH` to  `~/.zshrc` or `~/.bashrc`).
 
 Configure Bob to use the MCP server by updating `.bob/mcp.json` ([example](optional-generated-content/mcp.json)):
 
