@@ -21,6 +21,10 @@ We recommend you to create a branch before starting using Bob with this reposito
 * [Ansible-DevOps](ansible-devops): A demo to show how Bob can generate Ansible manifests to install and configure an HTTP Server.
 * [Tekton-DevOps](tekton-devops): A demo to show how Bob can generate Tekton manifests using `AGENTS.md` file.
 
+### 🛰️ Modernization
+
+* [Modernize EJBs To Quarkus](modernize-ejb-to-quarkus): A demo to show how to modernize an application developed with EJBs to Quarkus.
+
 ### 🤝 Knowledge Transfer
 
 * [Automated Architecture Tests](automated-architecture-taikai): A demo to show how to generate architecture documents and tests for legacy applications.
