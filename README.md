@@ -42,7 +42,7 @@ We recommend you to create a branch before starting using Bob with this reposito
 ### 👷‍♂️ IBM Bob
 
 * [IBM Bob Modes](bob-modes): Shows how to create and configure a Bob Mode with one MCP server and one Rule.
-* [Getting Started with SKills](getting-started-skills): Shows how to get started with Skill in Bob.
+* [Getting Started with Skills](getting-started-skills): Shows how to get started with Skill in Bob.
 
 ## 📁 Demo Structure
 
