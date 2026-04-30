@@ -28,6 +28,7 @@ We recommend you to create a branch before starting using Bob with this reposito
 ### 🤝 Knowledge Transfer
 
 * [Automated Architecture Tests](automated-architecture-taikai): A demo to show how to generate architecture documents and tests for legacy applications.
+* [Grounded Docs](indexing-documentation): A demo to show how to add context to IBM Bob by indexing documentation of internal projects.
 
 ### 🧠 AI Integration
 

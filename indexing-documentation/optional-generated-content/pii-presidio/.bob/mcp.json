@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+        "docs-mcp-server": {
+            "type": "sse",
+            "url": "http://localhost:6280/sse",
+            "disabled": false,
+            "alwaysAllow": []
+        }
+    }
+}
