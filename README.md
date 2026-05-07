@@ -67,7 +67,7 @@ Contact the team via the [discussion forum](https://github.com/IBM/bob-demo/disc
 
 ## For More Content Take a look at the Bob YT channel!
 
-[https://www.youtube.com/@ibm-bob](https://www.youtube.com/@ibm-bob)]
+[https://www.youtube.com/@ibm-bob](https://www.youtube.com/@ibm-bob)
 
 ## 💡 Tips for Working with Bob
 
