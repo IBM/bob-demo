@@ -1,5 +1,5 @@
+import { randomUUID } from 'crypto';
 import { Todo } from './models/todo';
-import { v4 as uuidv4 } from 'uuid';
 
 // Simple in-memory database
 class TodoDatabase {
@@ -9,7 +9,7 @@ class TodoDatabase {
     this.todos = new Map();
     // Add some sample data
     const sampleTodo: Todo = {
-      id: uuidv4(),
+      id: randomUUID(),
       title: 'Learn Node.js modernization',
       completed: false,
       createdAt: new Date()
@@ -27,7 +27,7 @@ class TodoDatabase {
 
   public create(title: string): Todo {
     const todo: Todo = {
-      id: uuidv4(),
+      id: randomUUID(),
       title: title,
       completed: false,
       createdAt: new Date()
